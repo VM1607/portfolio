@@ -44,7 +44,7 @@
                 &:after {
                     content: '';
                     width: 1px;
-                    height: 100%;
+                    height: calc(100% + 16px);
                     position: absolute;
                     top: -16px;
                     left: 0;
@@ -54,9 +54,21 @@
         }
     }
     &__item {
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 45px;
+            position: absolute;
+            background-color: #000;
+            top: 68px;
+        }
         &-head {
             position: relative;
             padding: 45px 0 0 100px;
+            h4 {
+                margin-bottom: 0;
+            }
 
         }
         &-body {
@@ -65,9 +77,24 @@
         }
         &-icon {
             position: absolute;
-            top: 26px;
-            left: 24px;
+            top: 50px;
+            left: 45px;
             @include before_circle;
+            img {
+                position: absolute;
+                left: 18px;
+                top: 14px;
+            }
+        }
+        &-location {
+            font-size: 12px;
+            line-height: 18px;
+            margin-top: 5px;
+        }
+        &-body {
+            font-size: 12px;
+            line-height: 18px;
         }
     }
+
 }
