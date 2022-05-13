@@ -16,7 +16,7 @@
     &__items {
         margin-top: 60px;
         display: grid;
-        grid-template: repeat(3, auto) / repeat(2, auto);
+        grid-template: repeat(3, minmax(45px, auto)) / repeat(2, 365px);
         justify-content: space-between;
         row-gap: 15px;
         &-wrapper {
@@ -43,10 +43,6 @@
         }
 
     }
-.wrapper {
-    width: 1140px;
-    padding: 0 50px 0 50px;
-}
 }
 
 
